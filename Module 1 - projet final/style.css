@@ -17,6 +17,7 @@ body {
 
 body {
   margin: 2em;
+  /*justify-content: center;*/
   /*a verifier*/
 }
 
@@ -32,10 +33,14 @@ h1 {
   color: #292e47;
 }
 
+h2 {
+  font-size: 32px;
+}
+
 h3 {
-  font-size: 20px;
+  font-size: 24px;
   color: #292e47;
-  font-weight: normal;
+  font-weight: bold;
   margin-bottom: 40px;
   color: #292e47;
 }
@@ -55,18 +60,144 @@ section {
   margin-bottom: 10px;
 }
 
+/* utile ou pas ?
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}*/
+
 .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* *** BURGER MENU *** */
+
+.nav-toggle {
+  display: none;
+}
+
+/* Style de base du label (hamburger) */
+.nav-toggle-label {
+  display: none; /* Par défaut, caché sur les grands écrans */
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+
+/* Les trois lignes de l'icône */
+.nav-toggle-label span {
+  background-color: #000; /* Changer la couleur si nécessaire */
+  height: 2px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+
+/* Position initiale des lignes */
+.nav-toggle-label span:nth-child(1) {
+  top: 0.4rem;
+}
+.nav-toggle-label span:nth-child(2) {
+  top: 0.9rem;
+}
+.nav-toggle-label span:nth-child(3) {
+  top: 1.4rem;
+}
+
+/* Lorsque le checkbox est coché */
+.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  transform: translateY(0.5rem) rotate(45deg);
+}
+.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0; /* Cache la ligne du milieu */
+}
+.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+/* Style pour les petits écrans */
+@media (max-width: 760px) {
+  .nav-toggle-label {
+    display: block;
+    margin-left: auto; /* Pousse le menu burger à droite */
+  }
+  .nav-bar-ul {
+    display: none;
+    background-color: #fff; /* Changer la couleur si nécessaire */
+    position: absolute;
+    top: 4.5rem; /* Juste en dessous du header */
+    right: 0;
+    width: 50%;
+    padding: 1rem;
+    text-align: right;
+    border-top: 2px solid #000; /* Changer la couleur si nécessaire */
+  }
+  /* Afficher le menu lorsque le checkbox est coché */
+  #nav-toggle:checked + .nav-toggle-label + .nav-bar-ul {
+    display: block;
+  }
+  /* Ajuster la direction des éléments */
+  .nav-bar-ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  /* Centrer le texte à droite */
+  .nav-bar-item {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+  }
+}
+
+/* Style pour les grands écrans */
+@media (min-width: 761px) {
+  .nav-bar-ul {
+    display: flex; /* Le menu est toujours visible sur les grands écrans */
+    position: static;
+    width: auto;
+    padding: 0;
+    border-top: none;
+  }
+  .nav-bar-ul {
+    flex-direction: row;
+    align-items: center;
+  }
+  .nav-toggle-label {
+    display: none; /* Cacher le label sur les grands écrans */
+  }
 }
 
 .header-container {
 }
 
-.header {
+.header-paragraph {
   text-align: left;
-}
+} /*utile?*/
 
 .hero-image {
   width: 100%;
+}
+
+.header-btn {
+  background-color: #072ac8;
+  color: white;
+  font-weight: normal;
+  padding: 15px;
+  margin: 30px auto 0px;
+  text-decoration: none;
+}
+
+.header-btn2 {
+  text-decoration: none;
+  color: #6b708d;
+  font-weight: bold;
 }
 
 .projects-img {
@@ -80,7 +211,7 @@ section {
   flex-wrap: wrap;
   gap: 40px;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   margin: 0px 0px 150px;
 }
 
@@ -92,6 +223,14 @@ section {
 .logo:hover {
   filter: grayscale(0%);
   /*faire apparaitre la couleur de l'image*/
+}
+
+.link-btn {
+  text-decoration: none;
+  color: #072ac8;
+  font-weight: bold;
+  margin: 10px 0px;
+  padding: 0px 0px 0px 10px;
 }
 
 .yellow-background {

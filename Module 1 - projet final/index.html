@@ -22,7 +22,9 @@
         <li><a class="nav-bar-item" href="#home">Home</a></li>
         <li><a class="nav-bar-item" href="#projects">Projects</a></li>
         <li><a class="nav-bar-item" href="#services">Services</a></li>
-        <li><a class="nav-bar-item contact-btn" href="#contact">Contact Us</a></li>
+        <li>
+          <a class="nav-bar-item contact-btn" href="#contact">Contact Us</a>
+        </li>
       </ul>
     </nav>
 
@@ -36,9 +38,10 @@
         </h3>
         <a class="header-btn" href="#contact">Get in touch</a>
         <a class="header-btn2" href="#projects">See our work</a>
-      </div>
-      <div>
-        <img class="hero-image" src="./hero-image.png" alt="Main image" />
+      
+        <div>
+          <img class="hero-image" src="./hero-image.png" alt="Main image" />
+        </div>
       </div>
     </header>
 
@@ -60,64 +63,77 @@
       </a>
     </section>
 
+    <div class="titleh2">
+      <h2>Recent Projects</h2>
+    </div>
     <section class="container" id="projects">
-      <div class="titleh2">
-        <h2>Recent Projects</h2>
-      </div>
       <article class="card">
         <img class="projects-img" src="./1.jpg" alt="Simplify" />
-        <h3>Simplify</h3>
+        <div class="inner-card">
+        <h3><b>Simplify</b></h3>
         <p>UI Design & App Development</p>
+        <br /><br />
         <a class="link-btn" href="#Simplify-page">Learn more</a>
+        </div>
       </article>
       <article class="card">
         <img class="projects-img" src="./2.jpg" alt="Dashcoin" />
-        <h3>Dashcoin</h3>
+        <div class="inner-card">
+        <h3><b>Dashcoin</b></h3>
         <p>Web Development</p>
+        <br /><br />
         <a class="link-btn" href="#Dashcoin-page">Learn more</a>
+      </div>
+        </article>
       </article>
       <article class="card">
         <img class="projects-img" src="./3.jpg" alt="Vectorify" />
-        <h3>Vectorify</h3>
-        <p>User Experience Design</p>
-        <a class="link-btn" href="#Vectorify-page">Learn more</a>
+        <div class="inner-card">
+          <h3><b>Vectorify</b></h3>
+          <p>User Experience Design</p>
+          <br /><br />
+          <a class="link-btn" href="#Vectorify-page">Learn more</a>
+        </div>
       </article>
     </section>
 
     <section class="dark-background" id="testimonial">
-      <h2>Hear What Our Clients Have To Say</h2>
-      <p>
+      <h2 class="dark-testimony">Hear What Our Clients Have To Say</h2>
+      <p class="dark-quote">
         "Circle helped us through every stage of our startup. We really enjoyed
-        working with you." <br />Kristin Watson<br />
-        Booking.com
+        working with you."
       </p>
+      <br />
+      <img src="profile.png" alt="profile picture" class="profile-img" />
+      <p class="quote-name">Kristin Watson</p>
+      <p class="dark-website">Booking.com</p>
     </section>
 
+    <div class="titleh2">
+      <h2>Our Services</h2>
+    </div>
     <section class="container" id="services">
-      <div class="titleh2">
-        <h2>Our Services</h2>
-      </div>
-      <article class="card">
+      <article class="card2">
         <img src="./1.svg" alt="UI Design" />
-        <h3>User Interface Design</h3>
+        <h3><b>User Interface Design</b></h3>
         <p>
           Circle provides you with a stunning user interface design that is
           accessible to everyone.
         </p>
         <a class="link-btn" href="#home">Learn more</a>
       </article>
-      <article class="card">
+      <article class="card2">
         <img src="./2.svg" alt="UX Design" />
-        <h3>User Experience Design</h3>
+        <h3><b>User Experience Design</b></h3>
         <p>
           Circle always focuses on delivering the best user experience to your
           customers.
         </p>
         <a class="link-btn" href="#home">Learn more</a>
       </article>
-      <article class="card">
+      <article class="card2">
         <img src="./3.svg" alt="App Dev" />
-        <h3>Application Development</h3>
+        <h3><b>Application Development</b></h3>
         <p>
           We develop high-quality mobile and web applications using the latest
           technology stack.
@@ -128,17 +144,18 @@
 
     <section class="yellow-background" id="contact">
       <h2>Do you have any questions?</h2>
+      <br />
       <h3>Let us help you!</h3>
+      <section class="mail-suscribe">
       <form class="slot-form" action="/register" method="post">
-        <div class="slot-form-container">
-          <img src="./mail.svg" alt="Mail icon" />
-          <input type="email" placeholder="Enter your email" />
+        <div class="mail-container">
+           <div class="slot-form-container">
+           <!-- <img src="./mail.svg" alt="Mail icon" /> -->
+            <input type="email" placeholder="Enter your email" />
+          </div>
+            <button class="mail-form-btn" type="submit">Subscribe</button>
         </div>
-        <div class="mail-form-btn">
-          <a href="./contact-page.html">
-            <button type="submit">Subscribe</button>
-          </a>
-        </div>
+        </section>
       </form>
     </section>
     <script src="circle.js"></script>

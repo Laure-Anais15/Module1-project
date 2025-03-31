@@ -7,12 +7,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  max-width: 1200px;
 }
 
 html,
 body {
   background-color: #f2f4fc;
+  max-width: 1200px;
+  /*centrer le contenu de la page*/
 }
 
 body {
@@ -38,10 +39,10 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
   color: #292e47;
   font-weight: normal;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   color: #292e47;
 }
 
@@ -61,7 +62,7 @@ section {
 
 .titleh2 {
   /*mettre titre au dessus des box*/
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .nav-bar {
@@ -110,40 +111,6 @@ ul {
   top: 1.4rem;
 }
 
-/* Style pour les petits écrans */
-@media (max-width: 760px) {
-  .nav-toggle-label {
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .nav-bar-ul {
-    display: none;
-    position: right;
-    top: 0;
-    left: 0;
-    width: 35%;
-    padding: 0.5rem;
-    flex-direction: column;
-    align-items: flex-end;
-    background-color: #e2e5f0;
-    gap: 0.5rem;
-  }
-  /* Afficher le menu lorsque le checkbox est coché */
-  #nav-toggle:checked + .nav-toggle-label + .nav-bar-ul {
-    display: flex;
-  }
-
-  .nav-bar-item {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-  }
-}
-/* ***fin burger menu*** */
-
 .nav-bar-item {
   text-decoration: none;
   color: #072ac8;
@@ -164,6 +131,11 @@ ul {
 .header-paragraph {
   text-align: left;
 } /*utile?*/
+
+/*.hero-paragraph{
+  display: flex;
+  flex-wrap: wrap;
+}*/
 
 .hero-image {
   width: 100%;
@@ -213,40 +185,109 @@ ul {
   text-decoration: none;
   color: #072ac8;
   font-weight: bold;
-  margin: 10px 0px;
-  padding: 0px 0px 0px 10px;
-}
-
-.yellow-background {
-  background-color: #fce300;
-  text-align: center;
+  padding: 20px 0px;
 }
 
 .dark-background {
   background-color: #292e47;
+  background-image: url("./orbit.png");
+  background-size: cover;
   text-align: center;
+  padding: 90px 20px;
+}
+
+.dark-testimony {
+  color: white;
+}
+
+.dark-quote {
+  color: #ffc600;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.profile-img {
+  width: 15%;
+  max-width: 3em;
+  height: 3em;
+  border-radius: 200px;
+}
+
+.quote-name {
+  color: #a2d6f9;
+}
+
+.dark-website {
+  color: white;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
-  border-top: 2em;
+  width: 100%;
+  justify-content: center;
+  gap: 2em;
   padding: 20px 20px 20px 20px;
-  /*flex-direction: none;*/
+  max-width: 1200px; /*supp?*/
+  margin: 0 auto;
 }
 
 .card {
-  max-width: 1200px;
   overflow: hidden;
   text-align: left;
-  padding: 0;
-  margin: 0 auto;
   background-color: white;
 }
 
-.card:hover {
+/*pour avoir une marge pour le texte mais pas pour l'image ?*/
+.inner-card {
+  margin: 20px 20px;
+}
+
+.card:hover,
+.card2:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card2 {
+  width: 300px;
+  height: 350px;
+
+  overflow: hidden;
+  text-align: left;
+  padding: 30px 15px;
+  background-color: white;
+}
+
+#services img {
+  background-color: #d1edff;
+  padding: 13px;
+  border-radius: 50px;
+  margin-bottom: 2em;
+}
+
+.yellow-background {
+  background-color: #ffc600;
+  text-align: center;
+  padding: 90px 0px 20px 0px;
+}
+
+.mail-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+}
+
+.mail-form-btn {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  padding: 15px;
+  border: none;
+  gap: 1em;
+  background-color: #072ac8;
 }
 
 .footer-list {
@@ -255,8 +296,89 @@ ul {
   gap: 20px;
 }
 
+/*contact form page*/
+
+.contact-title {
+  padding-top: 70px;
+}
+
+.contact-form-container {
+  justify-content: center;
+  line-height: 2.5;
+  color: rgb(82, 80, 80);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  text-align: left;
+  gap: 2em;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.6rem;
+  /*border: 1px solid #ccc;*/s
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #6b708d1a;
+}
+
+/*projects page*/
+
+.simplify-page-image{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-top: 50px;;
+  margin-bottom: 30px;
+}
+
+
+
 @media (min-width: 768px) {
   .hero-image {
     width: 40%;
   }
 }
+
+/* Style pour les petits écrans */
+@media (max-width: 760px) {
+  .nav-toggle-label {
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .nav-bar-ul {
+    display: none;
+    position: right;
+    top: 0;
+    left: 0;
+    width: 35%;
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #e2e5f0;
+    gap: 0.5rem;
+  }
+  /* Afficher le menu lorsque le checkbox est coché */
+  #nav-toggle:checked + .nav-toggle-label + .nav-bar-ul {
+    display: flex;
+  }
+
+  .nav-bar-item {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+}
+/* ***fin burger menu*** */

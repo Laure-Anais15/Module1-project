@@ -7,11 +7,33 @@
     <title>Circle Agency - Contact</title>
   </head>
   <body>
-    <section class="contact-form-container">
+    <nav class="nav-bar">
+      <a href="#Home">
+        <img class="circle-logo" src="./circle.svg" alt="Circle logo" />
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-bar-ul">
+        <li><a class="nav-bar-item" href="#home">Home</a></li>
+        <li><a class="nav-bar-item" href="#projects">Projects</a></li>
+        <li><a class="nav-bar-item" href="#services">Services</a></li>
+        <li>
+          <a class="nav-bar-item contact-btn" href="#contact">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="contact-title">
       <h1>Contact Us</h1>
+    </div>
+    <section class="contact-form-container">
       <form action="#" method="POST">
         <div>
-          <label for="fullname">Full Name</label>
+          <label for="fullname">Full Name *</label><br />
           <input
             type="text"
             id="fullname"
@@ -21,7 +43,7 @@
           />
         </div>
         <div>
-          <label for="email">Email</label>
+          <label for="email">Email</label><br />
           <input
             type="email"
             id="email"
@@ -31,7 +53,7 @@
           />
         </div>
         <div>
-          <label for="telephone">Phone</label>
+          <label for="telephone">Phone</label><br />
           <input
             type="tel"
             id="telephone"
@@ -40,7 +62,7 @@
           />
         </div>
         <div>
-          <label for="message">Message</label>
+          <label for="message">Message</label><br />
           <textarea
             id="comentarios"
             name="message"

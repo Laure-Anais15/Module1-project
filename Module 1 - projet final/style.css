@@ -61,14 +61,8 @@ header,
 section {
   margin-bottom: 120px !important;
 }
-/*.container {
-  margin: 20px auto;
-  padding-bottom: 10px;
-  width: 80%;
-}*/
 
 .titleh2 {
-  /*mettre titre au dessus des box*/
   margin-bottom: 40px;
 }
 
@@ -176,13 +170,11 @@ ul {
 }
 
 .logo {
-  /*mettre l'image en noir et blanc*/
   filter: grayscale(100%);
 }
 
 .logo:hover {
   filter: grayscale(0%);
-  /*faire apparaitre la couleur de l'image*/
 }
 
 .link-btn {
@@ -190,7 +182,6 @@ ul {
   color: #072ac8;
   font-weight: bold;
   padding: 20px 0px;
-  margin-top: 20px;
 }
 
 .dark-background {
@@ -207,8 +198,11 @@ ul {
 
 .dark-quote {
   color: #ffc600;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 1.3em;
   padding: 2rem 0;
+  line-height: 1.7;
+  margin-top: 40px;
 }
 
 .profile-img {
@@ -243,7 +237,6 @@ ul {
   background-color: white;
 }
 
-/*pour avoir une marge pour le texte mais pas pour l'image ?*/
 .inner-card {
   margin: 20px 20px;
 }
@@ -255,7 +248,7 @@ ul {
 
 .card2 {
   width: 300px;
-  height: 350px;
+  height: 300px;
 
   overflow: hidden;
   text-align: left;
@@ -266,9 +259,17 @@ ul {
 .card2 div {
   background-color: #d1edff;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  padding: 10px;
+  width: 70px;
+  height: 70px;
   display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.container p {
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 #services img {
@@ -279,6 +280,7 @@ ul {
   background-color: #ffc600;
   text-align: center;
   padding: 90px 0px 20px 0px;
+  box-shadow: #d37802 2px 2px 10px;
 }
 
 .mail-container {
@@ -309,6 +311,11 @@ ul {
   background-color: #072ac8;
 }
 
+.mail-form-btn:hover {
+  box-shadow: 3px 5px 5px rgba(14, 1, 87, 0.5);
+  transform: scale(1.05);
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -333,6 +340,11 @@ ul {
 .footer-ul a {
   text-decoration: none;
   color: #6b708d;
+}
+
+.footer-ul a:hover {
+  color: #072ac8;
+  font-size: 1.1em;
 }
 
 .footer-ul li {
@@ -402,6 +414,11 @@ textarea {
   background-color: #072ac8;
 }
 
+.contactpage-submit:hover {
+  box-shadow: 3px 5px 5px rgba(14, 1, 87, 0.5);
+  transform: scale(1.05);
+}
+
 .error-message {
   color: red;
   font-size: 14px;
@@ -410,12 +427,17 @@ textarea {
 
 /*projects page*/
 
+.right-side-p {
+  text-align: right;
+}
+
 .simplify-page-image {
   width: 100%;
   height: 400px;
   object-fit: cover;
   margin-top: 50px;
   margin-bottom: 30px;
+  box-shadow: 0px 0px 10px rgba(74, 2, 83, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -454,6 +476,10 @@ textarea {
     height: 90px;
   }
 
+  .emojis:hover {
+    transform: rotate(-45deg);
+  }
+
   .emoji1 {
     top: 30px;
     left: 50px;
@@ -484,12 +510,13 @@ textarea {
     align-items: center;
     justify-content: space-evenly;
   }
+
   .nav-bar-ul {
     display: none;
     position: right;
     top: 0;
     left: 0;
-    width: 35%
+    width: 20%;
     padding: 10px;
     flex-direction: column;
     align-items: flex-end;
@@ -518,5 +545,11 @@ textarea {
   .emojis,
   .mini-card {
     display: none;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
   }
 }

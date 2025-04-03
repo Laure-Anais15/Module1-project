@@ -27,22 +27,24 @@
         </li>
       </ul>
     </nav>
-
-    <header class="header-container">
-      <div class="hero-paragraph">
+    <header >
+      <section class="header-container">
+        <div>
         <h1>Empower Your Business With Stunning Design!</h1>
         <br />
-        <h3>
-          Circle is a digital design and development studio. We design and
-          develop astonishing websites and mobile apps.
-        </h3>
-        <a class="header-btn" href="#contact">Get in touch</a>
-        <a class="header-btn2" href="#projects">See our work</a>
-      
-        <div>
-          <img class="hero-image" src="./hero-image.png" alt="Main image" />
+            <h3 class="hero-text">
+              Circle is a digital design and development studio. We design and
+              develop astonishing websites and mobile apps.
+            </h3>
+            <a class="header-btn" href="#contact">Get in touch</a>
+            <a class="header-btn2" href="#projects">See our work</a>
         </div>
-      </div>
+        <div class="relative">
+            <img class="hero-image" src="./hero-image.png" alt="Main image" />
+            <img class="mini-card-1 mini-card" src="./card-1.png" alt="Credit card" />
+            <img class="mini-card-2 mini-card" src="./card-2.png" alt="Thumb emoji" />
+          </div>
+          </section>
     </header>
 
     <section class="logo-box">
@@ -97,7 +99,11 @@
       </article>
     </section>
 
-    <section class="dark-background" id="testimonial">
+    <section class="dark-background relative" id="testimonial">
+      <img class="emojis emoji1" src="memoji-1.png" alt="emoji" />
+      <img class="emojis emoji2" src="memoji-2.png" alt="emoji" />
+      <img class="emojis emoji3" src="memoji-3.png" alt="emoji" />
+      <img class="emojis emoji4" src="memoji-4.png" alt="emoji" />
       <h2 class="dark-testimony">Hear What Our Clients Have To Say</h2>
       <p class="dark-quote">
         "Circle helped us through every stage of our startup. We really enjoyed
@@ -114,7 +120,9 @@
     </div>
     <section class="container" id="services">
       <article class="card2">
-        <img src="./1.svg" alt="UI Design" />
+        <div>
+          <img src="./1.svg" alt="UI Design" />
+        </div>
         <h3><b>User Interface Design</b></h3>
         <p>
           Circle provides you with a stunning user interface design that is
@@ -123,7 +131,9 @@
         <a class="link-btn" href="#home">Learn more</a>
       </article>
       <article class="card2">
-        <img src="./2.svg" alt="UX Design" />
+        <div>
+          <img src="./2.svg" alt="UX Design" />
+        </div>
         <h3><b>User Experience Design</b></h3>
         <p>
           Circle always focuses on delivering the best user experience to your
@@ -132,7 +142,9 @@
         <a class="link-btn" href="#home">Learn more</a>
       </article>
       <article class="card2">
-        <img src="./3.svg" alt="App Dev" />
+        <div>
+          <img src="./3.svg" alt="App Dev" />
+        </div>
         <h3><b>Application Development</b></h3>
         <p>
           We develop high-quality mobile and web applications using the latest
@@ -150,28 +162,29 @@
       <form class="slot-form" action="/register" method="post">
         <div class="mail-container">
            <div class="slot-form-container">
-           <!-- <img src="./mail.svg" alt="Mail icon" /> -->
-            <input type="email" placeholder="Enter your email" />
+            <input id="e-mail-input" type="email" placeholder="Enter your email" />
           </div>
             <button class="mail-form-btn" type="submit">Subscribe</button>
         </div>
         </section>
       </form>
     </section>
-    <script src="circle.js"></script>
+    <script src="script.js"></script>
   </body>
   <footer class="footer">
-    <section class="address">
+    <section class="footer-container">
       <a href="#Home">
         <img class="circle-logo" src="./circle.svg" alt="Circle logo" />
       </a>
-      <p>2972 Westheimer Rd. Santa Ana,<br />Illinois 85486</p>
+      <p class="address">2972 Westheimer Rd. Santa Ana,<br />Illinois 85486</p>
     </section>
     <section class="footer-list">
       <ul class="footer-ul">
         <li><a class="footer-item" href="#home">Team</a></li>
         <li><a class="footer-item" href="#home">Services</a></li>
         <li><a class="footer-item" href="#home">About Us</a></li>
+      </ul>
+      <ul class="footer-ul">
         <li><a class="footer-item" href="#home">Press</a></li>
         <li><a class="footer-item" href="#home">Projects</a></li>
         <li><a class="footer-item" href="#home">Privacy Policy</a></li>

@@ -9,17 +9,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  margin: 0 auto;
+}
+
 html,
 body {
   background-color: #f2f4fc;
   max-width: 1200px;
-  /*centrer le contenu de la page*/
 }
 
 body {
   margin: 1em 2em;
-  /*justify-content: center;*/
-  /*a verifier*/
 }
 
 ul {
@@ -30,12 +31,14 @@ ul {
 h1 {
   font-size: 40px;
   font-weight: 700;
+  margin-top: 60px;
   margin-bottom: 20px;
   color: #292e47;
 }
 
 h2 {
   font-size: 32px;
+  color: #292e47;
 }
 
 h3 {
@@ -46,13 +49,17 @@ h3 {
   color: #292e47;
 }
 
+h4 {
+  color: #292e47;
+}
+
 p {
   font-size: 16px;
 }
 
 header,
 section {
-  margin-bottom: 150px !important;
+  margin-bottom: 120px !important;
 }
 /*.container {
   margin: 20px auto;
@@ -83,17 +90,16 @@ ul {
   display: none;
 }
 
-/* Style de base du label (hamburger) */
 .nav-toggle-label {
-  display: none; /* Par défaut, caché sur les grands écrans */
+  display: none; /* by default, hidden on big screens */
   cursor: pointer;
   width: 1.5rem;
   position: relative;
 }
 
-/* Les trois lignes de l'icône */
+/* 3 lines of the icon */
 .nav-toggle-label span {
-  background-color: #6b708d; /* Changer la couleur si nécessaire */
+  background-color: #6b708d;
   height: 3px;
   width: 100%;
   display: block;
@@ -125,17 +131,15 @@ ul {
   background-color: #072ac8;
 }
 
-.header-container {
+.hero-text {
+  margin-bottom: 40px;
 }
 
-.header-paragraph {
-  text-align: left;
-} /*utile?*/
-
-/*.hero-paragraph{
+.header-container {
   display: flex;
-  flex-wrap: wrap;
-}*/
+  flex-direction: column;
+  width: 100%;
+}
 
 .hero-image {
   width: 100%;
@@ -146,7 +150,7 @@ ul {
   color: white;
   font-weight: normal;
   padding: 15px;
-  margin: 30px auto 0px;
+  margin: 30px 30px 0px 0px;
   text-decoration: none;
 }
 
@@ -186,6 +190,7 @@ ul {
   color: #072ac8;
   font-weight: bold;
   padding: 20px 0px;
+  margin-top: 20px;
 }
 
 .dark-background {
@@ -228,7 +233,7 @@ ul {
   justify-content: center;
   gap: 2em;
   padding: 20px 20px 20px 20px;
-  max-width: 1200px; /*supp?*/
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -258,11 +263,16 @@ ul {
   background-color: white;
 }
 
-#services img {
+.card2 div {
   background-color: #d1edff;
-  padding: 13px;
-  border-radius: 50px;
-  margin-bottom: 2em;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+}
+
+#services img {
+  width: 80%;
 }
 
 .yellow-background {
@@ -279,7 +289,16 @@ ul {
   gap: 1em;
 }
 
+#e-mail-input {
+  background-color: white;
+  height: 50px;
+  border: none;
+  width: 20em;
+  margin-top: 20px;
+}
+
 .mail-form-btn {
+  margin-top: 20px;
   width: 100px;
   height: 50px;
   cursor: pointer;
@@ -290,10 +309,44 @@ ul {
   background-color: #072ac8;
 }
 
-.footer-list {
+.footer {
   display: flex;
-  justify-content: right;
-  gap: 20px;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.footer-list {
+  width: 50%;
+}
+
+.footer-list ul:nth-child(1) {
+  margin-bottom: 50px;
+}
+
+.footer-ul {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-ul a {
+  text-decoration: none;
+  color: #6b708d;
+}
+
+.footer-ul li {
+  width: 100px;
+}
+
+.contact-footer {
+  padding: 0;
+}
+
+.address {
+  margin-top: 20px;
+  line-height: 1.7;
+  color: #292e47;
 }
 
 /*contact form page*/
@@ -319,37 +372,110 @@ form {
   gap: 2em;
 }
 
+input {
+  height: 50px;
+}
+
 input,
 textarea {
   width: 100%;
+
   max-width: 100%;
   padding: 0.6rem;
-  /*border: 1px solid #ccc;*/s
+  /*border: 1px solid #ccc;*/
   border-radius: 4px;
+  border: none;
   font-size: 1rem;
   outline: none;
   background-color: #6b708d1a;
 }
 
+.contactpage-submit {
+  margin-top: 20px;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  color: white;
+  padding: 15px;
+  border: none;
+  gap: 1em;
+  background-color: #072ac8;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 /*projects page*/
 
-.simplify-page-image{
+.simplify-page-image {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  margin-top: 50px;;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
-
-
 @media (min-width: 768px) {
   .hero-image {
-    width: 40%;
+    width: 70%;
+    margin-left: 30px;
+    justify-content: space-between;
+  }
+
+  .header-container {
+    flex-direction: row;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .mini-card {
+    position: absolute;
+    width: 45%;
+  }
+
+  .mini-card-1 {
+    top: 0;
+    left: -40px;
+  }
+
+  .mini-card-2 {
+    bottom: -100px;
+    right: 100px;
+  }
+
+  .emojis {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+  }
+
+  .emoji1 {
+    top: 30px;
+    left: 50px;
+  }
+
+  .emoji2 {
+    top: 30px;
+    right: 50px;
+  }
+
+  .emoji3 {
+    bottom: 30px;
+    left: 50px;
+  }
+
+  .emoji4 {
+    bottom: 30px;
+    right: 50px;
   }
 }
 
-/* Style pour les petits écrans */
+/* small screens only */
 @media (max-width: 760px) {
   .nav-toggle-label {
     height: 25px;
@@ -363,14 +489,22 @@ textarea {
     position: right;
     top: 0;
     left: 0;
-    width: 35%;
-    padding: 0.5rem;
+    width: 35%
+    padding: 10px;
     flex-direction: column;
     align-items: flex-end;
     background-color: #e2e5f0;
     gap: 0.5rem;
   }
-  /* Afficher le menu lorsque le checkbox est coché */
+
+  .contact-btn {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin: 0;
+    background-color: #072ac8;
+  }
+
   #nav-toggle:checked + .nav-toggle-label + .nav-bar-ul {
     display: flex;
   }
@@ -380,5 +514,9 @@ textarea {
     display: inline-block;
     text-align: center;
   }
+
+  .emojis,
+  .mini-card {
+    display: none;
+  }
 }
-/* ***fin burger menu*** */

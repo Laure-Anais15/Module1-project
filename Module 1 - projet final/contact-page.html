@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Circle Agency - Contact</title>
+    <title>Contact page</title>
   </head>
   <body>
     <nav class="nav-bar">
@@ -31,7 +31,7 @@
       <h1>Contact Us</h1>
     </div>
     <section class="contact-form-container">
-      <form action="#" method="POST">
+      <form id="contactForm" action="#" method="POST">
         <div>
           <label for="fullname">Full Name *</label><br />
           <input
@@ -39,8 +39,8 @@
             id="fullname"
             name="fullname"
             placeholder="Enter your full name"
-            required
           />
+          <span class="error-message" id="nameError"></span>
         </div>
         <div>
           <label for="email">Email</label><br />
@@ -49,8 +49,8 @@
             id="email"
             name="email"
             placeholder="Enter your email address"
-            required
           />
+          <span class="error-message" id="emailError"></span>
         </div>
         <div>
           <label for="telephone">Phone</label><br />
@@ -60,18 +60,43 @@
             name="telephone"
             placeholder="Enter your phone number"
           />
+          <span class="error-message" id="phoneError"></span>
         </div>
         <div>
           <label for="message">Message</label><br />
           <textarea
-            id="comentarios"
             name="message"
+            id="message"
             rows="10"
             placeholder="Write your message here..."
           ></textarea>
+          <span class="error-message" id="messageError"></span>
         </div>
-        <button type="submit">Submit</button>
+        <button class="contactpage-submit" type="submit">Submit</button>
       </form>
     </section>
+    <footer class="footer contact-footer">
+      <section>
+        <a href="#Home">
+          <img class="circle-logo" src="./circle.svg" alt="Circle logo" />
+        </a>
+        <p class="address">
+          2972 Westheimer Rd. Santa Ana,<br />Illinois 85486
+        </p>
+      </section>
+      <section class="footer-list">
+        <ul class="footer-ul">
+          <li><a class="footer-item" href="#home">Team</a></li>
+          <li><a class="footer-item" href="#home">Services</a></li>
+          <li><a class="footer-item" href="#home">About Us</a></li>
+        </ul>
+        <ul class="footer-ul">
+          <li><a class="footer-item" href="#home">Press</a></li>
+          <li><a class="footer-item" href="#home">Projects</a></li>
+          <li><a class="footer-item" href="#home">Privacy Policy</a></li>
+        </ul>
+      </section>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -370,7 +370,7 @@ ul {
 .contact-form-container {
   justify-content: center;
   line-height: 2.5;
-  color: rgb(82, 80, 80);
+  color: rgb(94, 91, 91);
 }
 
 form {
@@ -399,7 +399,7 @@ textarea {
   border: none;
   font-size: 1rem;
   outline: none;
-  background-color: #6b708d36;
+  background-color: #8f95b836;
 }
 
 .contactpage-submit {
@@ -476,9 +476,9 @@ textarea {
     height: 90px;
   }
 
-  .emojis:hover {
+  /*.emojis:hover {
     transform: rotate(-45deg);
-  }
+  }*/
 
   .emoji1 {
     top: 30px;

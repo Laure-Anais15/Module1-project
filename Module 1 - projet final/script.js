@@ -4,11 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    if(!validateForm()) return;
-    
-    let name = document.getElementById("fullname").value;
+    if (!validateForm()) return;
 
-    console.log("El nombre es: " + name)
+    let name = document.getElementById("fullname").value;
   });
 });
 
@@ -47,5 +45,4 @@ function validateForm() {
     isValid = false;
   }
   return isValid;
-  //setCustomValidity()
 }

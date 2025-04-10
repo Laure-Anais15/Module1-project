@@ -7,13 +7,12 @@ window.addEventListener("load", async () => {
 
     const mainProjectId = getQuerystringId();
     const mainProjectIndex = data.findIndex(
-      (project) => project.uuid === mainProjectId //d'où sort project ici?
+      (project) => project.uuid === mainProjectId
     );
 
     const mainProject = data[mainProjectIndex];
     addMainProject(mainProject);
 
-    // Retire le projet principal de la liste et ajoute 3 autres projets
     data.splice(mainProjectIndex, 1);
     const otherProjects = data.slice(0, 3).reverse();
     console.log(otherProjects);
@@ -46,8 +45,6 @@ function addMainProject(project) {
 function addOtherProjects(projects) {
   const container = document.getElementById("projects");
 
-  //probleme ?
-
   projects.forEach((project) => {
     const projectHTML = `
       <section>
@@ -60,5 +57,4 @@ function addOtherProjects(projects) {
   });
 
   container.innerHTML = projectHTML;
-  //return projectHTML;
 }
